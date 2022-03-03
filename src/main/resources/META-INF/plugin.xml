@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>org.pcha.intellij-bloblang-support</id>
+    <name>Bloblang Support</name>
+    <vendor email="pablocha1992@gmail.com" url="https://github.com/pcha">pcha</vendor>
+
+    <description><![CDATA[
+    A syntax support plugin for <a href="https://www.benthos.dev/docs/guides/bloblang/about">bloblang</a> benthos language.
+    ]]></description>
+
+        on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
