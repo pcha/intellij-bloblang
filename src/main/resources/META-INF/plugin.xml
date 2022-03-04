@@ -11,7 +11,11 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <fileType name="Bloblang"
+                  implementationClass="org.pcha.benthos.language.BloblangFileType"
+                  fieldName="INSTANCE"
+                  language="Bloblang"
+                  extensions="blobl"/>
     </extensions>
 
     <actions>
