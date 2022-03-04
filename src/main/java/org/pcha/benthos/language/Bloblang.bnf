@@ -1,0 +1,20 @@
+{
+  parserClass="org.pcha.benthos.language.parser.BloblangParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Bloblang"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.pcha.benthos.language.psi"
+  psiImplPackage="org.pcha.benthos.language.psi.impl"
+
+  elementTypeHolderClass="org.pcha.benthos.language.psi.BloblangTypes"
+  elementTypeClass="org.pcha.benthos.language.psi.BloblangElementType"
+  tokenTypeClass="org.pcha.benthos.language.psi.BloblangTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
