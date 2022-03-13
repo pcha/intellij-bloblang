@@ -31,3 +31,5 @@ tasks {
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
+
+sourceSets["main"].java.srcDirs("src/main/gen")

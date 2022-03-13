@@ -13,8 +13,112 @@
   tokenTypeClass="org.pcha.benthos.language.psi.BloblangTokenType"
 }
 
-simpleFile ::= item_*
+bloblangFile ::= item_*
 
-private item_ ::= (property|COMMENT|CRLF)
+private item_ ::= (statement|COMMENT|NEWLINE)
 
-property ::= (KEY? SEPARATOR VALUE?) | KEY
+opnl ::= NEWLINE*
+
+statement ::= import_statement | map_statement | let_statement | meta_statement | plain_mapping_statement
+
+method ::= function
+
+filepath ::= QUOTED_STRING
+
+import_statement ::= IMPORT_TERM filepath
+
+identifier ::= VAR_NAME | SNAKE_CASE | ROOT | THIS
+
+map_statement ::= MAP_TERM map_name mapping
+
+map_name ::= QUOTED_STRING | identifier
+
+assignment ::= let_statement | meta_statement | plain_mapping_statement
+
+mapping ::= OPEN_BRACE opnl (assignment NEWLINE+)* assignment? CLOSE_BRACE
+
+variable_name ::= QUOTED_STRING | identifier
+
+let_statement ::= LET_TERM variable_name EQ query
+
+meta_statement ::= META_TERM (name_literal | QUOTED_STRING) EQ query
+
+name_literal ::= identifier | SNAKE_CASE
+
+plain_mapping_statement ::= path EQ query
+
+path ::= path_literal_segment ( DOT target_path )*
+
+path_literal_segment ::= identifier
+
+target_path ::= path_literal_segment | quoted_path_literal_segment
+
+quoted_path_literal_segment ::= QUOTED_STRING
+
+query ::= opnl arithmetic_expression
+
+arithmetic_expression ::= arithmetic_term (arithmetic_operator arithmetic_term)*
+
+arithmetic_term ::= MINUS? query_root
+
+query_root ::= with_tails
+
+with_tails ::= might_not (query_delim function_tail)*
+
+might_not ::= NOT? query_element
+
+query_delim ::= DOT
+
+function_tail ::= (OPEN_BRACE query CLOSE_BRACE) | method | field_literal_map
+
+field_literal_map ::= identifier | QUOTED_STRING
+
+arithmetic_operator ::= PLUS | MINUS | DIVIDE | MULTIPLY | REST | AND | OR | EQUAL | NOT_EQUAL | GREATER_OR_EQUAL | LOWER_OR_EQUAL | GREATER | LOWER | PIPE
+
+query_element ::= match_expression | if_expression | lambda_expression | brackets_expression | literal_value | function | VARIABLE_LITERAL | field_literal
+
+match_expression ::= MATCH_TERM query? match_cases_set
+
+match_cases_set ::= OPEN_BRACE (match_case COMMA)* match_case? CLOSE_BRACE
+
+match_case ::= (UNDERSCORE | query) DOUBLE_ARROW query
+
+if_expression ::= if else_if* else?
+
+if ::= IF_TERM query? OPEN_BRACE query opnl CLOSE_BRACE
+
+else_if ::= ELSE_TERM IF_TERM query? OPEN_BRACE query opnl CLOSE_BRACE
+
+else ::= ELSE_TERM OPEN_BRACE query opnl CLOSE_BRACE
+
+lambda_expression ::= context_name ARROW query // could be merged with function
+
+context_name ::= identifier
+
+brackets_expression ::= OPEN_PARENTHESIS query CLOSE_PARENTHESIS
+
+literal_value ::= BOOLEAN | NUMBER | TRIPLE_QUOTE_STRING | QUOTED_STRING | NULL | dynamic_array | dynamic_object
+
+dynamic_array ::= OPEN_BRACKET (query COMMA)* query? CLOSE_BRACKET
+
+dynamic_object ::= OPEN_BRACE (object_field COMMA)* object_field? opnl CLOSE_BRACE
+
+object_field ::= (QUOTED_STRING | query) COLON query
+
+function ::= FUNCTION_CALL_OPEN function_args function_call_close
+
+function_call_close ::= CLOSE_PARENTHESIS
+
+function_args ::= (arg (COMMA arg)*)?
+
+field_literal ::= field_path
+
+field_path ::= path_field_segment ( DOT field_path )*
+
+path_field_segment ::= (VAR_NAME | SNAKE_CASE | THIS ) & (!method)
+
+arg ::= named_arg | query
+
+named_arg ::= SNAKE_CASE COLON query
+
+

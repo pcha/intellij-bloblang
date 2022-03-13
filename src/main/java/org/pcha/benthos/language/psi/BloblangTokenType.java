@@ -9,6 +9,6 @@ public class BloblangTokenType extends com.intellij.psi.tree.IElementType {
     }
 
     public String toString() {
-        return "SimpleTokenType." + super.toString();
+        return "BloblangTokenType." + super.toString();
     }
 }

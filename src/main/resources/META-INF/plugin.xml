@@ -16,6 +16,8 @@
                   fieldName="INSTANCE"
                   language="Bloblang"
                   extensions="blobl"/>
+        <lang.parserDefinition language="Bloblang"
+                               implementationClass="org.pcha.benthos.language.BloblangParserDefinition"/>
     </extensions>
 
     <actions>
