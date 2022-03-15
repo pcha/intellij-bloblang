@@ -7,8 +7,10 @@
     A syntax support plugin for <a href="https://www.benthos.dev/docs/guides/bloblang/about">bloblang</a> benthos language.
     ]]></description>
 
-        on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    
+    <idea-version since-build="203" until-build="221.*" />
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Bloblang"
