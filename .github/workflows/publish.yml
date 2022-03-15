@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Generate Changelog and Version
-        id: conventional-changelog
+        id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
@@ -37,8 +37,8 @@ jobs:
           distribution: 'temurin'
       - name: Publish Plugin
         env:
-          VERSION: ${{ steps.conventional-changelog.outputs.version }}
-          CHANGELOG: ${{ steps.conventional-changelog.outputs.clean_changelog }}
+          VERSION: ${{ steps.changelog.outputs.version }}
+          CHANGELOG: ${{ steps.changelog.outputs.clean_changelog }}
           INTELLIJ_MARKETPLACE_TOKEN: ${{secrets.intellij_marketplace_token}}
           MARKETPLACE_CHANNEL: eap
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
