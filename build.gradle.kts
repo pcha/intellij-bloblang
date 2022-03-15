@@ -55,22 +55,18 @@ tasks {
         purgeOldFiles.set(true)
     }
 
+    compileJava {
+        dependsOn(generateLexer, generateParser)
+    }
+
     patchPluginXml {
         sinceBuild.set("203")
         changeNotes.set(System.getenv("CHANGELOG"))
     }
 
-    buildPlugin{
-        dependsOn("generateLexer", "generateParser")
-    }
-
     publishPlugin {
         token.set(System.getenv("INTELLIJ_MARKETPLACE_TOKEN"))
         channels.set(listOf(System.getenv("MARKETPLACE_CHANNEL")))
-    }
-
-    runIde {
-        dependsOn("generateLexer", "generateParser")
     }
 }
 tasks.getByName<Test>("test") {
