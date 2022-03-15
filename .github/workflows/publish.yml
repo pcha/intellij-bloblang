@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  publish:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -34,7 +34,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-      - name: Build with Gradle
+      - name: Publish Plugin
         env:
           VERSION: ${{ steps.conventional-changelog-action.outputs.version }}
           CHANGELOG: ${{ steps.conventional-changelog-action.outputs.clean_changelog }}
@@ -42,5 +42,5 @@ jobs:
           MARKETPLACE_CHANNEL: eap
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
-          arguments: build
+          arguments: publishPlugin
           
