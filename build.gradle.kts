@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.pcha"
-version = "0.1"
+version = System.getenv("VERSION")
 
 repositories {
     mavenCentral()
@@ -23,9 +23,13 @@ intellij {
 }
 tasks {
     patchPluginXml {
-        changeNotes.set("""
-            Add change notes here.<br>
-            <em>most HTML tags may be used</em>        """.trimIndent())
+        sinceBuild.set("203")
+        changeNotes.set(System.getenv("CHANGELOG"))
+    }
+
+    publishPlugin {
+        token.set(System.getenv("INTELLIJ_MARKETPLACE_TOKEN"))
+        channels.set(listOf(System.getenv("MARKETPLACE_CHANNEL")))
     }
 }
 tasks.getByName<Test>("test") {
