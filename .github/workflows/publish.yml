@@ -30,13 +30,15 @@ jobs:
           github-token: ${{ secrets.github_token }}
           release-count: 0
           version-file: ./.version.yml
-          skip-on-empty: false
+          skip-on-empty: true
       - name: Set up JDK 11
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'temurin'
       - name: Publish Plugin
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           VERSION: ${{ steps.changelog.outputs.version }}
           CHANGELOG: ${{ steps.changelog.outputs.clean_changelog }}
@@ -46,6 +48,7 @@ jobs:
         with:
           arguments: publishPlugin
       - name: Release
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: Hs1r1us/Release-AIO@v1.0
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
