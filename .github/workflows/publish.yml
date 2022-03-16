@@ -45,4 +45,12 @@ jobs:
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
           arguments: publishPlugin
+      - name: Release
+        uses: Hs1r1us/Release-AIO@v1.0
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          asset_files: "build/distributions/intellij-bloblang-support-{{ steps.changelog.outputs.version }}.zip"
+
           
