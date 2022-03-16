@@ -3,7 +3,7 @@ package org.pcha.benthos.language;
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
 import org.pcha.benthos.language.psi.BloblangTypes;
-import com.intellij.psi.TokenType;import org.pcha.benthos.language.psi.BloblangTypes;
+import com.intellij.psi.TokenType;
 
 %%
 
@@ -49,12 +49,12 @@ MULTIPLY_OPERATOR = "*"
 REST_OPERATOR = "%"
 AND_OPERATOR = "&&"
 OR_OPERATOR = "||"
-EQUAL_OPERATOR = "=="
-NOT_EQUALT_OPERATOR = "!="
+EQUALS_OPERATOR = "=="
+NOT_EQUALS_OPERATOR = "!="
 GREATER_OR_EQUAL_OPERATOR = ">="
-LOWER_OR_EQUAL_OPERATOR = "<="
+LESS_OR_EQUAL_OPERATOR = "<="
 GREATER_OPERATOR = ">"
-LOWER_OPERATOR = "<"
+LESS_OPERATOR = "<"
 PIPE_OPERATOR = "|"
 
 IMPORT_KEYWORD = "import"
@@ -103,6 +103,7 @@ LET_KEYWORD = "let"
 {DOT}                                                       { return BloblangTypes.DOT; }
 {UNDERSCORE}                                                { return BloblangTypes.UNDERSCORE; }
 {COLON}                                                     { return BloblangTypes.COLON; }
+
 {NOT_OPERATOR}                                              { return BloblangTypes.NOT; }
 {MINUS_OPERATOR}                                            { return BloblangTypes.MINUS; }
 {PLUS_OPERATOR}                                             { return BloblangTypes.PLUS; }
@@ -111,13 +112,13 @@ LET_KEYWORD = "let"
 {REST_OPERATOR}                                             { return BloblangTypes.REST; }
 {AND_OPERATOR}                                              { return BloblangTypes.AND; }
 {OR_OPERATOR}                                               { return BloblangTypes.OR; }
-{EQUAL_OPERATOR}                                            { return BloblangTypes.EQUAL; }
-{NOT_EQUALT_OPERATOR}                                       { return BloblangTypes.NOT_EQUAL; }
+{EQUALS_OPERATOR}                                            { return BloblangTypes.EQUALS; }
+{NOT_EQUALS_OPERATOR}                                       { return BloblangTypes.NOT_EQUALS; }
 {GREATER_OR_EQUAL_OPERATOR}                                 { return BloblangTypes.GREATER_OR_EQUAL; }
-{LOWER_OR_EQUAL_OPERATOR}                                   { return BloblangTypes.LOWER_OR_EQUAL; }
+{LESS_OR_EQUAL_OPERATOR}                                    { return BloblangTypes.LESS_OR_EQUAL; }
 {GREATER_OPERATOR}                                          { return BloblangTypes.GREATER; }
-{LOWER_OPERATOR}                                            { return BloblangTypes.LOWER; }
-{PIPE_OPERATOR}                                               { return BloblangTypes.PIPE; }
+{LESS_OPERATOR}                                             { return BloblangTypes.LESS; }
+{PIPE_OPERATOR}                                             { return BloblangTypes.PIPE; }
 
 {DOUBLE_ARROW}                                              { return BloblangTypes.DOUBLE_ARROW; }
 {ARROW}                                                     { return BloblangTypes.ARROW; }
@@ -131,10 +132,5 @@ LET_KEYWORD = "let"
 {SNAKE_CASE}{OPEN_PARENTHESIS}                              { return BloblangTypes.FUNCTION_CALL_OPEN; }
 {VAR_NAME}                                                  { return BloblangTypes.VAR_NAME; }
 
-//<YYINITIAL> {KEY_CHARACTER}+                               { yybegin(YYINITIAL); return BloblangTypes.KEY; }
-//<YYINITIAL> {SEPARATOR}                                     { yybegin(WAITING_VALUE); return BloblangTypes.SEPARATOR; }
-//<WAITING_VALUE> {CRLF}({CRLF}|{WHITE_SWAITING_QUOTED_STRINGPACE})+               { yybegin(YYINITIAL); return TokenType.WHITE_SPACE; }
-//<WAITING_VALUE> {WHITE_SPACE}+                              { yybegin(WAITING_VALUE); return TokenType.WHITE_SPACE; }
-//<WAITING_VALUE> {FIRST_VALUE_CHARACTER}{VALUE_CHARACTER}*   { yybegin(YYINITIAL); return BloblangTypes.VALUE; }
 ({WHITE_SPACE})+                                            { yybegin(YYINITIAL); return TokenType.WHITE_SPACE; }
 [^]                                                         { return TokenType.BAD_CHARACTER; }

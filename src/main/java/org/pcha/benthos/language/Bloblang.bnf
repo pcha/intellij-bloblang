@@ -73,7 +73,7 @@ function_tail ::= (OPEN_BRACE query CLOSE_BRACE) | method | field_literal_map
 
 field_literal_map ::= identifier | QUOTED_STRING
 
-arithmetic_operator ::= PLUS | MINUS | DIVIDE | MULTIPLY | REST | AND | OR | EQUAL | NOT_EQUAL | GREATER_OR_EQUAL | LOWER_OR_EQUAL | GREATER | LOWER | PIPE
+arithmetic_operator ::= PLUS | MINUS | DIVIDE | MULTIPLY | REST | AND | OR | EQUALS | NOT_EQUALS | GREATER_OR_EQUAL | LESS_OR_EQUAL | GREATER | LESS | PIPE
 
 query_element ::= match_expression | if_expression | lambda_expression | brackets_expression | literal_value | function | VARIABLE_LITERAL | field_literal
 
