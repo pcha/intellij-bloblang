@@ -20,6 +20,8 @@
                   extensions="blobl"/>
         <lang.parserDefinition language="Bloblang"
                                implementationClass="org.pcha.benthos.language.BloblangParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="Bloblang"
+                                       implementationClass="org.pcha.benthos.language.BloblangSyntaxHighlighterFactory"/>
     </extensions>
 
     <actions>
