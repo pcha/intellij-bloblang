@@ -28,7 +28,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
-          release-count: 1
+          release-count: 0
           version-file: ./.version.yml
           skip-on-empty: false
       - name: Set up JDK 11
@@ -47,10 +47,12 @@ jobs:
           arguments: publishPlugin
       - name: Release
         uses: Hs1r1us/Release-AIO@v1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
           release_name: ${{ steps.changelog.outputs.tag }}
-          asset_files: "build/distributions/intellij-bloblang-support-{{ steps.changelog.outputs.version }}.zip"
+          asset_files: "build/distributions/intellij-bloblang-support-${{ steps.changelog.outputs.version }}.zip"
 
           
