@@ -5,6 +5,7 @@ import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
 import com.intellij.openapi.editor.HighlighterColors;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
+import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IElementType;
 import org.jetbrains.annotations.NotNull;
 
@@ -82,7 +83,7 @@ public class BloblangSyntaxHighlighter extends SyntaxHighlighterBase {
                 Map.entry(FUNCTION_CALL_CLOSE.toString(), BLOBLANG_FUNCTION_CALL),
                 Map.entry(VAR_NAME.toString(), BLOBLANG_IDENTIFIER),
                 Map.entry(COMMENT.toString(), BLOBLANG_COMMENT),
-                Map.entry(BLOBLANG_BAD_CHARACTER.toString(), BLOBLANG_BAD_CHARACTER)
+                Map.entry(TokenType.BAD_CHARACTER.toString(), BLOBLANG_BAD_CHARACTER)
         );
         TextAttributesKey key = tokenTypeMaps.get(tokenType.toString());
         return key != null ? new TextAttributesKey[]{key} : new TextAttributesKey[0];
