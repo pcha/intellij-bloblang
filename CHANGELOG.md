@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/pcha/intellij-bloblang-support/compare/v0.2.0...v0.2.1) (2022-03-18)
+
+
+### Bug Fixes
+
+* **syntah-highliter:** reference to bad character token ([74b02b7](https://github.com/pcha/intellij-bloblang-support/commit/74b02b72b2310503dd6003fa66b3d327755fac19))
+
+
+
 # [0.2.0](https://github.com/pcha/intellij-bloblang-support/compare/v0.1.9...v0.2.0) (2022-03-16)
 
 
