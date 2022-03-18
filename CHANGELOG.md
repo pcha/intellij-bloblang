@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/pcha/intellij-bloblang-support/compare/v0.1.9...v0.2.0) (2022-03-16)
+
+
+### Features
+
+* add syntax-highliter ([cbcaf57](https://github.com/pcha/intellij-bloblang-support/commit/cbcaf57829f6267dee9e1d04dff8dca4f80b7b0d))
+
+
+
 ## [0.1.9](https://github.com/pcha/intellij-bloblang-support/compare/v0.1.8...v0.1.9) (2022-03-16)
 
 

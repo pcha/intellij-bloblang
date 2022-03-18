@@ -31,6 +31,12 @@ jobs:
           release-count: 0
           version-file: ./.version.yml
           skip-on-empty: true
+      - name: Markdown to HTML
+        id: md2html
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        uses: lifepal/markdown-to-html@v1.2
+        with:
+          text: ${{ steps.changelog.outputs.clean_changelog }}
       - name: Set up JDK 11
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: actions/setup-java@v2
@@ -41,7 +47,7 @@ jobs:
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           VERSION: ${{ steps.changelog.outputs.version }}
-          CHANGELOG: ${{ steps.changelog.outputs.clean_changelog }}
+          CHANGELOG: ${{ steps.md2html.outputs.html }}
           INTELLIJ_MARKETPLACE_TOKEN: ${{secrets.intellij_marketplace_token}}
           MARKETPLACE_CHANNEL: eap
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
