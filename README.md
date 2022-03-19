@@ -1,7 +1,7 @@
 # intellij-bloblang-support
-An IntelliJ-based IDEs plugin for [bloblang](https://www.benthos.dev/docs/guides/bloblang/about) support.
+An IntelliJ-based IDEs plugin for [**Bloblang**](https://www.benthos.dev/docs/guides/bloblang/about) support.
 
-Bloblang is a  mapping language developed by @jeffail as part of [benthos](https://github.com/benthosdev/benthos), a high performance and resilient stream processor.
+**Bloblang** is a  mapping language developed by @jeffail as part of [**Benthos**](https://github.com/benthosdev/benthos), a high performance and resilient stream processor.
 
 ## Features
 This pliugin recognizes the files `*.blobl` as bloblang files and check and highlight the syntax of these files. Fot more details tou can check the [CHANGELOG](CHANGELOG.md).
@@ -36,7 +36,7 @@ _See the [JetBrains Documentation](https://www.jetbrains.com/help/idea/managing-
 Everybody is welcome to report bugs and suggest enhancements. Please use the [Github Issues](https://github.com/pcha/intellij-bloblang-support/issues) page. 
 
 ### Contribute with Pull Requests
-If you want to contribute with code, you're Wellcome! Please follow the next guidelines:
+If you want to contribute with code, you're wellcome! Please follow the next guidelines:
 
 - Make an Issue, if it doesn't already exist, and express your desire of contributing in the development, that way we can organize ourselves and avoid to work in the same feature or bug.
 - Use [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) Messages. This is used for the changelog and version generation.
