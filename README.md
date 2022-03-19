@@ -1,5 +1,5 @@
 # intellij-bloblang-support
-A IntelliJ-based IDEs plugin for [bloblang](https://www.benthos.dev/docs/guides/bloblang/about) support.
+An IntelliJ-based IDEs plugin for [bloblang](https://www.benthos.dev/docs/guides/bloblang/about) support.
 
 Bloblang is a  mapping language developed by @jeffail as part of [benthos](https://github.com/benthosdev/benthos), a high performance and resilient stream processor.
 
