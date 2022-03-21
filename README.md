@@ -9,7 +9,7 @@ This plugin recognizes the files `*.blobl` as bloblang files and check and highl
 ## Install
 ### From Marketplace
 This alternative keeps the plugin updated. Since the plugin is in the very beginning of its development, it isn't in the stable channel but in the EAP. For installing plugins from this channel you have to add the repository to your plugins repositories list.
-1. Press `Ctrl+Alt+S` (for Linux or Windows) (or `⌘ ,` for Mac) to open the IDE settings and select **Plugins**.
+1. Press `Ctrl+Alt+S` for Linux and Windows or `⌘`, for Mac to open the IDE settings and select **Plugins**.
 2. On the Plugins page, click![The Settings button](https://resources.jetbrains.com/help/img/idea/2021.3/icons.general.gearPlain.svg)  and select **Manage Plugin Repositories**.
 3. In the **Custom Plugin Repositories** dialog, click ![The Add icon](https://resources.jetbrains.com/help/img/idea/2021.3/icons.general.add.svg) and specify the URL `https://plugins.jetbrains.com/plugins/eap/18756`. 
 ![Add plugin custom repository](.docs/screenshot-add-plugin-eap-repository.png)
