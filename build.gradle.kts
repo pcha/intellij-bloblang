@@ -69,8 +69,12 @@ tasks {
         channels.set(listOf(System.getenv("MARKETPLACE_CHANNEL")))
     }
 }
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
+//tasks.getByName<Test>("test") {
+//    useJUnitPlatform()
+//}
+
+tasks.withType<Test> {
+    useJUnitPlatform() // Make all tests use JUnit 5
 }
 
 sourceSets["main"].java.srcDirs("src/main/gen")

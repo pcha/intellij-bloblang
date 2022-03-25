@@ -1,0 +1,7 @@
+Bloblang File(0,18)
+  BloblangStatementImpl(STATEMENT)(0,17)
+    BloblangImportStatementImpl(IMPORT_STATEMENT)(0,17)
+      PsiElement(BloblangTokenType.IMPORT_TERM)('import ')(0,7)
+      BloblangFilepathImpl(FILEPATH)(7,17)
+        PsiElement(BloblangTokenType.QUOTED_STRING)('"somefile"')(7,17)
+  PsiElement(BloblangTokenType.NEWLINE)('\n')(17,18)
