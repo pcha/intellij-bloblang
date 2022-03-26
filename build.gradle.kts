@@ -55,6 +55,10 @@ tasks {
         purgeOldFiles.set(true)
     }
 
+    compileKotlin {
+        dependsOn(generateLexer, generateParser)
+    }
+
     compileJava {
         dependsOn(generateLexer, generateParser)
     }
