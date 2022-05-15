@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.intellij") version "1.4.0"
+    id("org.jetbrains.intellij") version "1.5.3"
     kotlin("jvm") version "1.5.10"
     java
     id("org.jetbrains.grammarkit") version "2021.2.1"
@@ -14,8 +14,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    testImplementation("junit:junit:4.13.2")
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -73,12 +72,14 @@ tasks {
         channels.set(listOf(System.getenv("MARKETPLACE_CHANNEL")))
     }
 }
+
+//
 //tasks.getByName<Test>("test") {
 //    useJUnitPlatform()
 //}
 
-tasks.withType<Test> {
-    useJUnitPlatform() // Make all tests use JUnit 5
-}
+//tasks.withType<Test> {
+//    useJUnitPlatform() // Make all tests use JUnit 5
+//}
 
 sourceSets["main"].java.srcDirs("src/main/gen")
