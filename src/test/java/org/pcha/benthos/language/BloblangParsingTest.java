@@ -1,12 +1,14 @@
 package org.pcha.benthos.language;
 
 import com.intellij.testFramework.ParsingTestCase;
+import org.junit.Test;
 
 public class BloblangParsingTest extends ParsingTestCase{
     public BloblangParsingTest() {
         super("", "blobl", new BloblangParserDefinition());
     }
 
+    @Test
     public void testParsingTestData() {
         doTest(true);
     }
