@@ -13,11 +13,11 @@
   tokenTypeClass="org.pcha.benthos.language.psi.BloblangTokenType"
 }
 
-bloblangFile ::= item_*
+bloblangFile ::= statement (NEWLINE statement)* opnl
 
-private item_ ::= (statement|COMMENT|NEWLINE)
+//private item_ ::= statement
 
-opnl ::= NEWLINE*
+opnl ::= (NEWLINE|COMMENT)*
 
 statement ::= import_statement | map_statement | let_statement | meta_statement | plain_mapping_statement
 

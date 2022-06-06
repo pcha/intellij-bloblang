@@ -9,9 +9,31 @@ public class BloblangParsingTest extends ParsingTestCase{
     }
 
     @Test
-    public void testParsingTestData() {
+    public void testParsingBadVariableName() {
         doTest(true);
     }
+
+    @Test
+    public void testParsingBadMetaName() {
+        doTest(true);
+    }
+
+    @Test
+    public void testParsingNoMappings() {
+        doTest(true);
+    }
+
+    @Test
+    public void testDoubleMapping() {
+        doTest(true);
+    }
+
+    @Test
+    public void testLetStatement() {
+        doTest(true, true);
+    }
+
+
 
     /**
      * @return path to test data file directory relative to root of this module.

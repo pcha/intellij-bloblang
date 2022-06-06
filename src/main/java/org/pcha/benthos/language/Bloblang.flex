@@ -67,6 +67,7 @@ ROOT_KEYWORD = "root"
 THIS_KEYWORD = "this"
 
 LET_KEYWORD = "let"
+META_KEYWORD = "meta"
 
 %state WAITING_QUOTED_STRING
 %state WAITING_MAP_NAME
@@ -78,11 +79,12 @@ LET_KEYWORD = "let"
 
 %%
 
-<YYINITIAL> {END_OF_LINE_COMMENT}                           { yybegin(YYINITIAL); return BloblangTypes.COMMENT; }
+{END_OF_LINE_COMMENT}                                       { return BloblangTypes.COMMENT; }
 
 {IMPORT_KEYWORD}{WHITE_SPACE}+                              { return BloblangTypes.IMPORT_TERM; }
 {MAP_KEYWORD}{WHITE_SPACE}+                                 { return BloblangTypes.MAP_TERM; }
 {LET_KEYWORD}{WHITE_SPACE}+                                 { return BloblangTypes.LET_TERM; }
+{META_KEYWORD}{WHITE_SPACE}+                                { return BloblangTypes.META_TERM; }
 {IF_KEYWORD}{WHITE_SPACE}+                                  { return BloblangTypes.IF_TERM; }
 {ELSE_KEYWORD}{WHITE_SPACE}+                                { return BloblangTypes.ELSE_TERM; }
 {MATCH_KEYWORD}{WHITE_SPACE}+                               { return BloblangTypes.MATCH_TERM; }
