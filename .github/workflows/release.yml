@@ -30,7 +30,7 @@ jobs:
           github-token: ${{ secrets.github_token }}
           release-count: 0
           version-file: ./.version.yml
-          skip-on-empty: true
+          skip-on-empty: false
       - name: Markdown to HTML
         id: md2html
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
