@@ -1,3 +1,7 @@
+## [0.2.3](https://github.com/pcha/intellij-bloblang-support/compare/v0.2.2...v0.2.3) (2023-06-13)
+
+
+
 ## [0.2.2](https://github.com/pcha/intellij-bloblang-support/compare/v0.2.1...v0.2.2) (2022-06-06)
 
 
