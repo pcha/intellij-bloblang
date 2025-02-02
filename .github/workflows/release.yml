@@ -37,11 +37,11 @@ jobs:
         uses: lifepal/markdown-to-html@v1.2
         with:
           text: ${{ steps.changelog.outputs.clean_changelog }}
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'temurin'
       - name: Publish Plugin
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
