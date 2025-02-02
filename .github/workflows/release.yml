@@ -48,8 +48,8 @@ jobs:
         env:
           VERSION: ${{ steps.changelog.outputs.version }}
           CHANGELOG: ${{ steps.md2html.outputs.html }}
-          INTELLIJ_MARKETPLACE_TOKEN: ${{secrets.intellij_marketplace_token}}
-          MARKETPLACE_CHANNEL: eap
+          ORG_GRADLE_PROJECT_intellijPlatformPublishingToken: ${{secrets.intellij_marketplace_token}}
+          ORG_GRADLE_PROJECT_intellijPlatformPublishingChannel: eap
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
         with:
           arguments: publishPlugin

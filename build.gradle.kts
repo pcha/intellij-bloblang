@@ -32,6 +32,14 @@ dependencies {
 //    plugins.set(listOf(/* Plugin Dependencies */))
 //}
 
+intellijPlatform {
+    publishing {
+        token = providers.gradleProperty("intellijPlatformPublishingToken")
+        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").getOrElse("default"))
+    }
+}
+
+
 grammarKit {
     jflexRelease.set("1.7.0-1")
     grammarKitRelease.set("2021.1.2")
