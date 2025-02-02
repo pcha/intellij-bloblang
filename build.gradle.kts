@@ -26,7 +26,7 @@ dependencies {
 intellijPlatform {
     publishing {
         token = providers.gradleProperty("intellijPlatformPublishingToken")
-        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").get())
+        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").getOrElse("eap"))
     }
 }
 
