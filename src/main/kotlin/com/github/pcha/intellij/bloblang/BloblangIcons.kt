@@ -1,7 +1,6 @@
-package com.github.pcha.bloblang
+package com.github.pcha.intellij.bloblang
 
 import com.intellij.openapi.util.IconLoader
-import javax.swing.Icon
 
 object BloblangIcons {
     @JvmField

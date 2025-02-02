@@ -55,10 +55,10 @@ tasks {
 
     generateLexer {
         // source flex file
-        sourceFile.set(file("src/main/kotlin/com/github/pcha/bloblang/Bloblang.flex"))
+        sourceFile.set(file("src/main/kotlin/com/github/pcha/intellij/bloblang/Bloblang.flex"))
 
         // target directory for lexer
-        targetOutputDir.set(file("src/main/gen/com/github/pcha/bloblang"))
+        targetOutputDir.set(file("src/main/gen/com/github/pcha/intellij/bloblang"))
 
         // if set, plugin will remove a lexer output file before generating new one. Default: false
 //        purgeOldFiles.set(true)
@@ -68,16 +68,16 @@ tasks {
 
     generateParser {
         // source bnf file
-        sourceFile.set(file("src/main/kotlin/com/github/pcha/bloblang/Bloblang.bnf"))
+        sourceFile.set(file("src/main/kotlin/com/github/pcha/intellij/bloblang/Bloblang.bnf"))
 
         // optional, task-specific root for the generated files. Default: none
         targetRootOutputDir.set(file("src/main/gen"))
 
         // path to a parser file, relative to the targetRoot
-        pathToParser.set("com/github/pcha/bloblang/parser/BloblangParser.java")
+        pathToParser.set("com/github/pcha/intellij/bloblang/parser/BloblangParser.java")
 
         // path to a directory with generated psi files, relative to the targetRoot
-        pathToPsiRoot.set("com/github/pcha/bloblang/psi")
+        pathToPsiRoot.set("com/github/pcha/intellij/bloblang/psi")
 
         // if set, the plugin will remove a parser output file and psi output directory before generating new ones. Default: false
         purgeOldFiles.set(true)

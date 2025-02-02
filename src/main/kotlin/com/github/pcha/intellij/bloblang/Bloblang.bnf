@@ -1,16 +1,16 @@
 {
-  parserClass="com.github.pcha.bloblang.parser.BloblangParser"
+  parserClass="com.github.pcha.intellij.bloblang.parser.BloblangParser"
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 
   psiClassPrefix="Bloblang"
   psiImplClassSuffix="Impl"
-  psiPackage="com.github.pcha.bloblang.psi"
-  psiImplPackage="com.github.pcha.bloblang.psi.impl"
+  psiPackage="com.github.pcha.intellij.bloblang.psi"
+  psiImplPackage="com.github.pcha.intellij.bloblang.psi.impl"
 
-  elementTypeHolderClass="com.github.pcha.bloblang.psi.BloblangTypes"
-  elementTypeClass="com.github.pcha.bloblang.psi.BloblangElementType"
-  tokenTypeClass="com.github.pcha.bloblang.psi.BloblangTokenType"
+  elementTypeHolderClass="com.github.pcha.intellij.bloblang.psi.BloblangTypes"
+  elementTypeClass="com.github.pcha.intellij.bloblang.psi.BloblangElementType"
+  tokenTypeClass="com.github.pcha.intellij.bloblang.psi.BloblangTokenType"
 }
 
 bloblangFile ::= item_*

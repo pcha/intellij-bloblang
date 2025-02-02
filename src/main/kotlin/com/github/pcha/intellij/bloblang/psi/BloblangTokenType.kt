@@ -1,6 +1,6 @@
-package com.github.pcha.bloblang.psi
+package com.github.pcha.intellij.bloblang.psi
 
-import com.github.pcha.bloblang.BloblangLanguage
+import com.github.pcha.intellij.bloblang.BloblangLanguage
 import com.intellij.psi.tree.IElementType
 import org.jetbrains.annotations.NonNls
 

@@ -1,8 +1,8 @@
-package com.github.pcha.bloblang;
+package com.github.pcha.intellij.bloblang;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
-import com.github.pcha.bloblang.psi.BloblangTypes;
+import com.github.pcha.intellij.bloblang.psi.BloblangTypes;
 import com.intellij.psi.TokenType;
 
 %%

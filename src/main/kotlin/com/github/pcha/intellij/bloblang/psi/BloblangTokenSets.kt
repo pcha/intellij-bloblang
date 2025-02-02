@@ -1,4 +1,4 @@
-package com.github.pcha.bloblang.psi
+package com.github.pcha.intellij.bloblang.psi
 
 import com.intellij.psi.TokenType
 import com.intellij.psi.tree.TokenSet

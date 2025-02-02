@@ -1,4 +1,4 @@
-package com.github.pcha.bloblang
+package com.github.pcha.intellij.bloblang
 
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.fileTypes.SyntaxHighlighter

@@ -16,16 +16,16 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Bloblang File"
-                  implementationClass="com.github.pcha.bloblang.BloblangFileType"
+                  implementationClass="com.github.pcha.intellij.bloblang.BloblangFileType"
                   fieldName="INSTANCE"
                   language="Bloblang"
                   extensions="blobl"/>
         <lang.parserDefinition language="Bloblang"
-                               implementationClass="com.github.pcha.bloblang.BloblangParserDefinition"/>
+                               implementationClass="com.github.pcha.intellij.bloblang.BloblangParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Bloblang"
-                                       implementationClass="com.github.pcha.bloblang.BloblangSyntaxHighlighterFactory"/>
+                                       implementationClass="com.github.pcha.intellij.bloblang.BloblangSyntaxHighlighterFactory"/>
         <colorSettingsPage
-                implementation="com.github.pcha.bloblang.BloblangColorSettingsPage"/>
+                implementation="com.github.pcha.intellij.bloblang.BloblangColorSettingsPage"/>
 
     </extensions>
 </idea-plugin>

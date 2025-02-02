@@ -1,9 +1,9 @@
-package com.github.pcha.bloblang
+package com.github.pcha.intellij.bloblang
 
-import com.github.pcha.bloblang.parser.BloblangParser
-import com.github.pcha.bloblang.psi.BloblangFile
-import com.github.pcha.bloblang.psi.BloblangTokenSets
-import com.github.pcha.bloblang.psi.BloblangTypes
+import com.github.pcha.intellij.bloblang.parser.BloblangParser
+import com.github.pcha.intellij.bloblang.psi.BloblangFile
+import com.github.pcha.intellij.bloblang.psi.BloblangTokenSets
+import com.github.pcha.intellij.bloblang.psi.BloblangTypes
 import com.intellij.lang.ASTNode
 import com.intellij.lang.ParserDefinition
 import com.intellij.lang.PsiParser

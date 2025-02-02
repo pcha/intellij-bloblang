@@ -1,4 +1,4 @@
-package com.github.pcha.bloblang
+package com.github.pcha.intellij.bloblang
 
 import com.intellij.lexer.FlexAdapter
 

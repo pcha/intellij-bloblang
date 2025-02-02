@@ -1,11 +1,10 @@
-package com.github.pcha.bloblang.psi
+package com.github.pcha.intellij.bloblang.psi
 
 import com.intellij.extapi.psi.PsiFileBase
 import com.intellij.openapi.fileTypes.FileType
 import com.intellij.psi.FileViewProvider
-import com.github.pcha.bloblang.BloblangFileType
-import com.github.pcha.bloblang.BloblangLanguage
-import org.jetbrains.annotations.NotNull
+import com.github.pcha.intellij.bloblang.BloblangFileType
+import com.github.pcha.intellij.bloblang.BloblangLanguage
 
 class BloblangFile(viewProvider: FileViewProvider) :
     PsiFileBase(viewProvider, BloblangLanguage.INSTANCE) {

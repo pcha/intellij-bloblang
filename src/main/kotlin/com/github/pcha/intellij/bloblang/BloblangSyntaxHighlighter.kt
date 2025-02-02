@@ -1,6 +1,6 @@
-package com.github.pcha.bloblang
+package com.github.pcha.intellij.bloblang
 
-import com.github.pcha.bloblang.psi.BloblangTypes
+import com.github.pcha.intellij.bloblang.psi.BloblangTypes
 import com.intellij.lexer.Lexer
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
