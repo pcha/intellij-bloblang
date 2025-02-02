@@ -23,19 +23,13 @@ dependencies {
     }
 }
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
-//intellij {
-//    version.set("2024.1.7")
-//    type.set("IC") // Target IDE Platform
-//
-//    plugins.set(listOf(/* Plugin Dependencies */))
-//}
-
 intellijPlatform {
     publishing {
         token = providers.gradleProperty("intellijPlatformPublishingToken")
-        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").getOrElse("default"))
+        channels = providers.gradleProperty("intellijPlatformPublishingChannel")
+            .map { listOf(it) }
+            .orElse(listOf("default"))
+//        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").getOrElse("default"))
     }
 }
 
@@ -103,11 +97,6 @@ tasks {
 //        privateKey.set(System.getenv("PRIVATE_KEY"))
 //        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
 //    }
-
-    publishPlugin {
-        token.set(System.getenv("INTELLIJ_MARKETPLACE_TOKEN"))
-        channels.set(listOf(System.getenv("MARKETPLACE_CHANNEL")))
-    }
 }
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
