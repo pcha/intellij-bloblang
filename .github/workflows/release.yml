@@ -51,6 +51,7 @@ jobs:
           ORG_GRADLE_PROJECT_intellijPlatformPublishingToken: ${{secrets.intellij_marketplace_token}}
           ORG_GRADLE_PROJECT_intellijPlatformPublishingChannel: eap
         uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
+        continue-on-error: true
         with:
           arguments: publishPlugin
       - name: Release
