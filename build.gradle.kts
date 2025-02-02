@@ -26,10 +26,7 @@ dependencies {
 intellijPlatform {
     publishing {
         token = providers.gradleProperty("intellijPlatformPublishingToken")
-        channels = providers.gradleProperty("intellijPlatformPublishingChannel")
-            .map { listOf(it) }
-            .orElse(listOf("default"))
-//        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").getOrElse("default"))
+        channels = listOf(providers.gradleProperty("intellijPlatformPublishingChannel").get())
     }
 }
 
