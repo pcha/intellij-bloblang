@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/pcha/intellij-bloblang-support/compare/v0.2.3...v1.0.0) (2025-02-02)
+
+
+### Features
+
+* adds syntax Highlighter ([43869e9](https://github.com/pcha/intellij-bloblang-support/commit/43869e91bd99952b013cef1eead82d83478d4b6c))
+
+
+### BREAKING CHANGES
+
+* Minimum supported IDE version is now 2023.3.
+
+
+
 ## [0.2.3](https://github.com/pcha/intellij-bloblang-support/compare/v0.2.2...v0.2.3) (2023-06-13)
 
 
