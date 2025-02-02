@@ -1,3 +1,7 @@
+## [1.0.1](https://github.com/pcha/intellij-bloblang-support/compare/v1.0.0...v1.0.1) (2025-02-02)
+
+
+
 # [1.0.0](https://github.com/pcha/intellij-bloblang-support/compare/v0.2.3...v1.0.0) (2025-02-02)
 
 
