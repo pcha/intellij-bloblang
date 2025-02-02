@@ -4,4 +4,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "intellij-bloblang-support"
+rootProject.name = "intellij-bloblang-suport"

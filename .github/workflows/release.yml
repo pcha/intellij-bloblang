@@ -62,6 +62,6 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
           release_name: ${{ steps.changelog.outputs.tag }}
-          asset_files: "build/distributions/intellij-bloblang-support-${{ steps.changelog.outputs.version }}.zip"
+          asset_files: "build/distributions/intellij-bloblang-suport-${{ steps.changelog.outputs.version }}.zip"
 
           

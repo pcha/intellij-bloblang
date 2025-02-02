@@ -1,4 +1,4 @@
-# intellij-bloblang-support
+# intellij-bloblang-suport
 An IntelliJ-based IDEs plugin for [**Bloblang**](https://docs.redpanda.com/redpanda-connect/guides/bloblang/about/) support.
 
 **Bloblang** is a  mapping language developed by @jeffail as part of [**Redpanda Connect**](https://github.com/redpanda-data/connect), a high performance and resilient stream processor.
@@ -22,7 +22,7 @@ _See the [JetBrains Documentation](https://www.jetbrains.com/help/idea/managing-
 
 ### From disk
 This alternative allows you to choose the version to install, also it avoids the Jetbrains moderation, so the last releases are available few days before than in the Marketplace.
-1. Go to the **[Release Github project page](https://github.com/pcha/intellij-bloblang-support/releases)** and Download the plugin archive of the desired version, named `intellij-bloblang-support-x.y.z.zip`, where `x.y.z` is the plugin version.
+1. Go to the **[Release Github project page](https://github.com/pcha/intellij-bloblang-suport/releases)** and Download the plugin archive of the desired version, named `intellij-bloblang-suport-x.y.z.zip`, where `x.y.z` is the plugin version.
 2. Press `Ctrl+Alt+S` for Linux and Windows or `⌘`, for Mac to open the IDE settings and select **Plugins**.
 3. On the **Plugins** page, click [The Settings button](https://resources.jetbrains.com/help/img/idea/2021.3/icons.general.gearPlain.svg) and then click **Install Plugin from Disk**.
 4. Select the downloaded plugin file and click **OK**.
@@ -33,7 +33,7 @@ _See the [JetBrains Documentation](https://www.jetbrains.com/help/idea/managing-
 ## Feedback and Contribution
 
 ### Bug Reports and Suggesting Enhancements
-Everybody is welcome to report bugs and suggest enhancements. Please use the [Github Issues](https://github.com/pcha/intellij-bloblang-support/issues) page. 
+Everybody is welcome to report bugs and suggest enhancements. Please use the [Github Issues](https://github.com/pcha/intellij-bloblang-suport/issues) page. 
 
 ### Contribute with Pull Requests
 If you want to contribute with code, you're welcome! Please follow the next guidelines:

@@ -1,6 +1,6 @@
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.github.pcha.intellij-bloblang-support</id>
+    <id>com.github.pcha.bloblang</id>
     <name>Bloblang Support</name>
     <vendor email="pablocha1992@gmail.com" url="https://github.com/pcha">pcha</vendor>
 
