@@ -1,8 +1,8 @@
-package org.pcha.benthos.language;
+package com.github.pcha.bloblang;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
-import org.pcha.benthos.language.psi.BloblangTypes;
+import com.github.pcha.bloblang.psi.BloblangTypes;
 import com.intellij.psi.TokenType;
 
 %%

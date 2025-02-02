@@ -1,7 +1,7 @@
 # intellij-bloblang-support
-An IntelliJ-based IDEs plugin for [**Bloblang**](https://www.benthos.dev/docs/guides/bloblang/about) support.
+An IntelliJ-based IDEs plugin for [**Bloblang**](https://docs.redpanda.com/redpanda-connect/guides/bloblang/about/) support.
 
-**Bloblang** is a  mapping language developed by @jeffail as part of [**Benthos**](https://github.com/benthosdev/benthos), a high performance and resilient stream processor.
+**Bloblang** is a  mapping language developed by @jeffail as part of [**Redpanda Connect**](https://github.com/redpanda-data/connect), a high performance and resilient stream processor.
 
 ## Features
 This plugin recognizes the files `*.blobl` as bloblang files and check and highlight the syntax of these files. Fot more details you can check the [CHANGELOG](CHANGELOG.md).

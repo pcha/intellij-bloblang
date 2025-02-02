@@ -1,30 +1,31 @@
 <idea-plugin>
-    <id>org.pcha.intellij-bloblang-support</id>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.pcha.intellij-bloblang-support</id>
     <name>Bloblang Support</name>
     <vendor email="pablocha1992@gmail.com" url="https://github.com/pcha">pcha</vendor>
 
-    <description><![CDATA[
-    A syntax support plugin for <a href="https://www.benthos.dev/docs/guides/bloblang/about">bloblang</a> benthos language.
-    ]]></description>
+    <description>
+        A syntax support plugin for &lt;a href=&quot;https://docs.redpanda.com/redpanda-connect/guides/bloblang/about/&quot;&gt;bloblang&lt;/a&gt;
+        Redpanda Connect language.
+    </description>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
-    
-    <idea-version since-build="203" until-build="221.*" />
+
+    <idea-version since-build="203" until-build="243.*"/>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Bloblang"
-                  implementationClass="org.pcha.benthos.language.BloblangFileType"
+        <fileType name="Bloblang File"
+                  implementationClass="com.github.pcha.bloblang.BloblangFileType"
                   fieldName="INSTANCE"
                   language="Bloblang"
                   extensions="blobl"/>
         <lang.parserDefinition language="Bloblang"
-                               implementationClass="org.pcha.benthos.language.BloblangParserDefinition"/>
+                               implementationClass="com.github.pcha.bloblang.BloblangParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Bloblang"
-                                       implementationClass="org.pcha.benthos.language.BloblangSyntaxHighlighterFactory"/>
-    </extensions>
+                                       implementationClass="com.github.pcha.bloblang.BloblangSyntaxHighlighterFactory"/>
+        <colorSettingsPage
+                implementation="com.github.pcha.bloblang.BloblangColorSettingsPage"/>
 
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
+    </extensions>
 </idea-plugin>

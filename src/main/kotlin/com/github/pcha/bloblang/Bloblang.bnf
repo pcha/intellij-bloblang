@@ -1,16 +1,16 @@
 {
-  parserClass="org.pcha.benthos.language.parser.BloblangParser"
+  parserClass="com.github.pcha.bloblang.parser.BloblangParser"
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 
   psiClassPrefix="Bloblang"
   psiImplClassSuffix="Impl"
-  psiPackage="org.pcha.benthos.language.psi"
-  psiImplPackage="org.pcha.benthos.language.psi.impl"
+  psiPackage="com.github.pcha.bloblang.psi"
+  psiImplPackage="com.github.pcha.bloblang.psi.impl"
 
-  elementTypeHolderClass="org.pcha.benthos.language.psi.BloblangTypes"
-  elementTypeClass="org.pcha.benthos.language.psi.BloblangElementType"
-  tokenTypeClass="org.pcha.benthos.language.psi.BloblangTokenType"
+  elementTypeHolderClass="com.github.pcha.bloblang.psi.BloblangTypes"
+  elementTypeClass="com.github.pcha.bloblang.psi.BloblangElementType"
+  tokenTypeClass="com.github.pcha.bloblang.psi.BloblangTokenType"
 }
 
 bloblangFile ::= item_*
