@@ -9,8 +9,10 @@ object BloblangTokenSets {
     val COMMENTS: TokenSet = TokenSet.create(BloblangTypes.COMMENT)
 
     val STRING_LITERALS: TokenSet = TokenSet.create(
-        BloblangTypes.QUOTED_STRING,
-        BloblangTypes.TRIPLE_QUOTE_STRING
+        BloblangTypes.STRING_CONTENT,
+        BloblangTypes.SINGLE_LINE_STRING_QUOTE,
+        BloblangTypes.MULTILINE_STRING_QUOTE,
+        BloblangTypes.STRING_ESCAPE
     )
 
     val IDENTIFIERS: TokenSet = TokenSet.create(

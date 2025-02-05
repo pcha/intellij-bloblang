@@ -22,8 +22,13 @@ class BloblangSyntaxHighlighter : SyntaxHighlighterBase() {
             BloblangTypes.COMMENT -> COMMENT_KEYS
 
             // Literales de cadena
-            BloblangTypes.QUOTED_STRING,
-            BloblangTypes.TRIPLE_QUOTE_STRING -> STRING_KEYS
+            BloblangTypes.SINGLE_LINE_STRING_QUOTE,
+            BloblangTypes.MULTILINE_STRING_QUOTE,
+            BloblangTypes.STRING_CONTENT,
+            BloblangTypes.MULTILINE_STRING -> STRING_KEYS
+
+            BloblangTypes.STRING_ESCAPE,
+            BloblangTypes.ESCAPED_CHAR -> STRING_ESCAPED_CHAR_KEYS
 
             // Números
             BloblangTypes.NUMBER -> NUMBER_KEYS
@@ -75,6 +80,9 @@ class BloblangSyntaxHighlighter : SyntaxHighlighterBase() {
         val STRING = TextAttributesKey.createTextAttributesKey(
             "BLOBLANG_STRING", DefaultLanguageHighlighterColors.STRING
         )
+        val STRING_ESCAPED_CHAR = TextAttributesKey.createTextAttributesKey(
+            "BLOBLANG_STRING_ESCAPED_CHAR", DefaultLanguageHighlighterColors.VALID_STRING_ESCAPE
+        )
         val NUMBER = TextAttributesKey.createTextAttributesKey(
             "BLOBLANG_NUMBER", DefaultLanguageHighlighterColors.NUMBER
         )
@@ -91,6 +99,7 @@ class BloblangSyntaxHighlighter : SyntaxHighlighterBase() {
         private val WHITE_SPACE_KEYS = arrayOf(WHITE_SPACE)
         private val COMMENT_KEYS = arrayOf(COMMENT)
         private val STRING_KEYS = arrayOf(STRING)
+        private val STRING_ESCAPED_CHAR_KEYS = arrayOf(STRING_ESCAPED_CHAR)
         private val NUMBER_KEYS = arrayOf(NUMBER)
         private val KEYWORD_KEYS = arrayOf(KEYWORD)
         private val OPERATOR_KEYS = arrayOf(OPERATOR)
