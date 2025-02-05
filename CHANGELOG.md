@@ -1,3 +1,12 @@
+## [1.0.10](https://github.com/pcha/intellij-bloblang-support/compare/v1.0.9...v1.0.10) (2025-02-05)
+
+
+### Bug Fixes
+
+* solve parsing and lexing errors ([816ada1](https://github.com/pcha/intellij-bloblang-support/commit/816ada12c8787e4a90f9605c73db0ff3a02d6f61))
+
+
+
 ## [1.0.9](https://github.com/pcha/intellij-bloblang-support/compare/v1.0.8...v1.0.9) (2025-02-03)
 
 
